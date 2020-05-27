@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import List from './List';
 import Input from './Input';
+import styled from 'styled-components';
+
+const titleStyle = { margin: '0' ,color: '#333', fontSize: 30 };
+const ReactApp = styled.div`
+  text-align: center;
+  width: 350px;
+  margin: 50px auto 0;
+`;
 
 class App extends Component {
   constructor(props){
@@ -40,11 +48,11 @@ class App extends Component {
  
   render() {
     return (
-      <div>
-        <h1>TODOアプリ</h1>
-        <List todo={this.state.todo} deleteTodo={this.deleteTodo}/>
+      <ReactApp>
+        <h1 style={titleStyle}>FamilyShare</h1>
         <Input addTodo={this.addTodo} />
-      </div>
+        <List todo={this.state.todo} deleteTodo={this.deleteTodo}/>
+      </ReactApp>
     );
   }
 }
