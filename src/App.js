@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import List from './List';
-import Input from './Input';
+import List from './components/List';
+import Input from './components/Input';
 import styled from 'styled-components';
 
 const titleStyle = { margin: '0' ,color: '#333', fontSize: 30 };
