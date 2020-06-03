@@ -39,7 +39,11 @@ class App extends Component {
   // 削除機能
   deleteTodo(i) {
     // 削除
-    this.state.todo.splice(i, 1);
+
+      let result = window.confirm(`本当に削除して問題ないですか？`);
+      if( result ) {
+        this.state.todo.splice(i, 1);
+      }
     // 保存
     this.setState({
       todo : this.state.todo
